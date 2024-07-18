@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Transactions</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/css/styling.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Customer Transactions</h1>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <input type="text" id="filter-name" class="form-control" placeholder="Filter by Customer Name">
+            </div>
+            <div class="col-md-6">
+                <input type="number" id="filter-amount" class="form-control" placeholder="Filter by Transaction Amount">
+            </div>
+        </div>
+        <table id="customers-table" class="table table-striped mb-5">
+            <thead class="p-3 text-left">
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Total Transaction Amount</th>
+                    <th>Number of Transactions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <canvas id="transaction-chart" width="400" height="200"></canvas>
+    </div>
+    <script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./src/js/main.js"></script>
+</body>
+
+</html>
